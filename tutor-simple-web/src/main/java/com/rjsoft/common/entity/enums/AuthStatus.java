@@ -1,4 +1,4 @@
-package com.rjsoft.common.entity.enmus;
+package com.rjsoft.common.entity.enums;
 
 public enum AuthStatus {
 	/**

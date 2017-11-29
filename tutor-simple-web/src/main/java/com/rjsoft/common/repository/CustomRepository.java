@@ -37,4 +37,5 @@ public interface CustomRepository<T, ID extends Serializable>extends JpaReposito
     public void delete(ID[] ids);
 
 
+    public void delete(ID id);
 }

@@ -17,6 +17,8 @@
         <hibernate.version>5.2.11.Final</hibernate.version>
         <spring-data-jpa.version>2.0.0.RELEASE</spring-data-jpa.version>
         <spring-data-commons.version>2.0.0.RELEASE</spring-data-commons.version>
+        <spring-data-redis.version>2.0.0.RELEASE</spring-data-redis.version>
+        <redis-client.version>2.9.0</redis-client.version>
         <aspectj.version>1.8.10</aspectj.version>
         <guava.version>15.0</guava.version>
         <commons-lang3.version>3.4</commons-lang3.version>
@@ -34,7 +36,8 @@
         <druid.version>1.0.26</druid.version>
         <logback.version>1.1.7</logback.version>
         <log4j-web.version>2.5</log4j-web.version>
-
+        <fastjson.version>1.2.41</fastjson.version>
+        <commons-codec.version>1.11</commons-codec.version>
     </properties>
     <dependencies>
 
@@ -264,6 +267,24 @@
             <version>${guava.version}</version>
         </dependency>
 
+
+        <dependency>
+            <groupId>org.springframework.data</groupId>
+            <artifactId>spring-data-redis</artifactId>
+            <version>${spring-data-redis.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>redis.clients</groupId>
+            <artifactId>jedis</artifactId>
+            <version>${redis-client.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>com.alibaba</groupId>
+            <artifactId>fastjson</artifactId>
+            <version>${fastjson.version}</version>
+            <scope>compile</scope>
+        </dependency>
         <!-- web begin -->
         <dependency>
             <groupId>javax.servlet</groupId>
@@ -277,6 +298,12 @@
             <artifactId>jsp-api</artifactId>
             <version>${jsp-api.version}</version>
             <scope>provided</scope>
+        </dependency>
+
+        <dependency>
+            <groupId>commons-codec</groupId>
+            <artifactId>commons-codec</artifactId>
+            <version>${commons-codec.version}</version>
         </dependency>
 
         <!-- web end -->

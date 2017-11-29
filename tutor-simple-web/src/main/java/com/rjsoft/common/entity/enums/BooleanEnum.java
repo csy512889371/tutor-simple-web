@@ -1,4 +1,4 @@
-package com.rjsoft.common.entity.enmus;
+package com.rjsoft.common.entity.enums;
 
 public enum BooleanEnum {
     TRUE((short)1, "是"), FALSE((short)2, "否");

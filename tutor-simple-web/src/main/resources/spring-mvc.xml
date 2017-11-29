@@ -25,6 +25,17 @@
     <mvc:default-servlet-handler />
 
 
+    <mvc:interceptors>
+        <mvc:interceptor>
+            <mvc:mapping path="/**" />
+            <bean id="openSessionInViewInterceptor" class="org.springframework.orm.jpa.support.OpenEntityManagerInViewInterceptor">
+                <property name="entityManagerFactory" ref="entityManagerFactory" />
+            </bean>
+        </mvc:interceptor>
+
+    </mvc:interceptors>
+
+
     <!-- 用于返回json格式 -->
     <bean id="mappingJacksonHttpMessageConverter" class="org.springframework.http.converter.json.MappingJackson2HttpMessageConverter">
         <property name="supportedMediaTypes">
@@ -33,7 +44,6 @@
             </list>
         </property>
     </bean>
-
 
     <!-- 配置SpringMVC的视图解析器 -->
     <!-- 其viewClass属性的默认值就是org.springframework.web.servlet.view.JstlView -->

@@ -68,6 +68,7 @@ public class CustomRepositoryImpl<T, ID extends Serializable>
         return repositoryHelper.count(countAllQL);
     }
 
+    @Override
     public void delete(ID id) {
         T m = getOne(id);
         delete(m);

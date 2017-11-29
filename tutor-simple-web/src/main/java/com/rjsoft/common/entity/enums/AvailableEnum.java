@@ -1,5 +1,10 @@
-package com.rjsoft.common.entity.enmus;
+package com.rjsoft.common.entity.enums;
 
+/**
+ * User:cxtww
+ * Date:2016年11月2日 下午1:24:08
+ * Version:1.0
+ */
 public enum AvailableEnum {
     TRUE((short)1, "可用"), FALSE((short)2, "不可用");
 

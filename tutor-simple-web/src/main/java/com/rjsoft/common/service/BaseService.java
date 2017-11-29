@@ -73,6 +73,15 @@ public abstract class BaseService<M extends AbstractEntity<ID>, ID extends Seria
         customRepository.delete(ids);
     }
 
+    /**
+     * 根据主键删除相应实体
+     *
+     * @param id 实体
+     */
+    public void delete(ID id) {
+        customRepository.delete(id);
+    }
+
 
     /**
      * 按照主键查询
@@ -83,7 +92,6 @@ public abstract class BaseService<M extends AbstractEntity<ID>, ID extends Seria
     public M getOne(ID id) {
         return customRepository.getOne(id);
     }
-
 
     /**
      * 统计实体总数

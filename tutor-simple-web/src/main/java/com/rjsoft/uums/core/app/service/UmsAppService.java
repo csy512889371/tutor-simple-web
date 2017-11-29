@@ -7,7 +7,8 @@ import com.rjsoft.uums.facade.app.exception.AppSnExistsException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-@Service("umsAppService")
+
+@Service
 public class UmsAppService extends BaseService<UmsApp, String> {
     @Autowired
     private UmsAppRepository umsAppRepository;
