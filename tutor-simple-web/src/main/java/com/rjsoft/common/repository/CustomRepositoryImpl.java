@@ -91,11 +91,15 @@ public class CustomRepositoryImpl<T, ID extends Serializable>
     public Page<T> findAll(final Searchable searchable) {
         List<T> list = repositoryHelper.findAll(findAllQL, searchable, searchCallback);
         long total = searchable.hasPageable() ? count(searchable) : list.size();
-        return new PageImpl<T>(
-                list,
-                searchable.getPage(),
-                total
-        );
+        if (searchable.hasPageable()) {
+            return new PageImpl<T>(
+                    list,
+                    searchable.getPage(),
+                    total
+            );
+        }
+
+        return new PageImpl<T>(list);
     }
 
     @Override
@@ -105,7 +109,7 @@ public class CustomRepositoryImpl<T, ID extends Serializable>
 
     @Override
     public void delete(ID[] ids) {
-        for(ID id:ids){
+        for (ID id : ids) {
             this.delete(id);
         }
     }

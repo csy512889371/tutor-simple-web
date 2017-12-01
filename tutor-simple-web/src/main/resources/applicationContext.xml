@@ -76,7 +76,7 @@
             <props>
                 <prop key="hibernate.current_session_context_class">thread</prop>
                 <prop key="hibernate.hbm2ddl.auto">update</prop><!-- validate/update/create -->
-                <prop key="hibernate.show_sql">false</prop>
+                <prop key="hibernate.show_sql">true</prop>
                 <prop key="hibernate.format_sql">false</prop>
                 <!-- 建表的命名规则 -->
                 <prop key="hibernate.ejb.naming_strategy">org.hibernate.cfg.ImprovedNamingStrategy</prop>
@@ -114,7 +114,7 @@
         </tx:attributes>
     </tx:advice>
     <aop:config proxy-target-class="true">
-        <aop:pointcut id="pc" expression="execution(* com.rjsoft..service..*.*(..))"/>
+        <aop:pointcut id="pc" expression="execution(* com.rjsoft.uums.facade..service..*.*(..))"/>
         <aop:advisor pointcut-ref="pc" advice-ref="userTxAdvice"/>
     </aop:config>
 

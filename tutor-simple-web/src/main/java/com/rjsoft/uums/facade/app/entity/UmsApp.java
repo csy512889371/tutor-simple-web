@@ -1,16 +1,19 @@
 package com.rjsoft.uums.facade.app.entity;
 
+import com.rjsoft.common.entity.UUIDEntity;
+
 import javax.persistence.Entity;
 import javax.persistence.Table;
 
-import com.rjsoft.common.entity.UUIDEntity;
-
 /**
+ * User:cxtww
+ * Date:2016年11月11日 上午11:31:44
  * Version:1.0
  */
 @Entity
 @Table(name="UMS_APPLICATION")
-public class UmsApp extends UUIDEntity<String>{
+//@Cache(usage = CacheConcurrencyStrategy.READ_WRITE)
+public class UmsApp extends UUIDEntity<String> {
 
 	private static final long serialVersionUID = 1L;
 	/**
@@ -25,12 +28,12 @@ public class UmsApp extends UUIDEntity<String>{
 	 * 系统Url
 	 */
 	private String url;
-
+	
 	/**
 	 * 系统描述
 	 */
 	private String description;
-
+	
 	/**
 	 * 系统单点登录标志
 	 */
@@ -75,5 +78,5 @@ public class UmsApp extends UUIDEntity<String>{
 	public void setSsoFlag(Short ssoFlag) {
 		this.ssoFlag = ssoFlag;
 	}
-
+	
 }

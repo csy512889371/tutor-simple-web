@@ -38,10 +38,15 @@
         <log4j-web.version>2.5</log4j-web.version>
         <fastjson.version>1.2.41</fastjson.version>
         <commons-codec.version>1.11</commons-codec.version>
+        <cors-filter.version>2.6</cors-filter.version>
     </properties>
     <dependencies>
 
-
+        <dependency>
+            <groupId>com.thetransactioncompany</groupId>
+            <artifactId>cors-filter</artifactId>
+            <version>${cors-filter.version}</version>
+        </dependency>
 
         <!--common begin-->
         <dependency>
