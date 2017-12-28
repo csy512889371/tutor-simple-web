@@ -35,10 +35,10 @@
     <bean id="dataSource" class="com.alibaba.druid.pool.DruidDataSource" init-method="init" destroy-method="close">
         <property name="driverClassName" value="com.mysql.jdbc.Driver"/>
         <property name="url"
-                  value="jdbc:mysql://192.168.210.207:3306/demoone?useUnicode=true&amp;characterEncoding=UTF-8"/>
+                  value="jdbc:mysql://115.159.152.139:3306/videoblog?useUnicode=true&amp;characterEncoding=UTF-8"/>
 
         <property name="username" value="root"/>
-        <property name="password" value="123456"/>
+        <property name="password" value="Cxq@123456"/>
 
         <property name="filters" value="stat"/>
 
