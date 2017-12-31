@@ -17,7 +17,7 @@ public class FayRsaService {
 	
 	public static final String ALGORITHM = "RSA";
 	
-	public static final String TEXT = "爱死费崇政";
+	public static final String TEXT = "fay";
 	
 	public static void main(String[] args) throws NoSuchAlgorithmException {
 		KeyPairGenerator keyPairGen = KeyPairGenerator.getInstance(ALGORITHM);
